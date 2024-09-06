@@ -1,29 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  font-family: "Pacifico";
+  font-weight: 400;
+  font-style: normal;
+  background-image: url("https://us.123rf.com/450wm/sonyaillustration/sonyaillustration1606/sonyaillustration160600072/58314896-seamless-pattern-with-beach-sand.jpg?ver=6");
+}
+
+/* Navbar container styling */
+nav .nav-container {
+  display: flex;
+  flex-direction: column; /* Set container to be vertical */
+  justify-content: flex-start; /* Push contact info to bottom */
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background: linear-gradient(to bottom, #004680, #00475c); /* Simulate water effect */
+  border-right: 5px solid #555;
+  padding: 10px;
+  overflow: hidden; /* Ensure bubbles stay within bounds */
+}
+
+nav #box{
+  margin-top:4vh;
+}
+/* Navbar list styling */
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: fit-content;
-    top: 0px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    border-right: 5px solid #555;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Ensure the ul is still vertical */
+}
+
+nav li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111252;
+}
+
+/* Bubble styling */
+.bubble {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(92, 122, 255, 0.5));
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 15px);
+  animation: float var(--float-duration) ease-in infinite, sway var(--float-duration) ease-in-out infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  --float-height: -100vh;
+  --float-duration: 5s;
+}
+
+/* Customize bubble floating height and duration */
+.bubble:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  left: calc(30% - 20px);
+  --float-height: -80vh;
+  --float-duration: 6s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: calc(70% - 25px);
+  --float-height: -90vh;
+  --float-duration: 7s;
+}
+
+.bubble:nth-child(4) {
+  width: 35px;
+  height: 35px;
+  left: calc(20% - 17.5px);
+  --float-height: -70vh;
+  --float-duration: 5s;
+}
+
+.bubble:nth-child(5) {
+  width: 45px;
+  height: 45px;
+  left: calc(80% - 22.5px);
+  --float-height: -60vh;
+  --float-duration: 8s;
+}
+
+/* Float animation (vertical) */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  nav li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
+  100% {
+    transform: translateY(var(--float-height));
+    opacity: 0;
   }
-  
-  nav li a.active {
-    background-color: #04AA6D;
-    color: white;
+}
+
+/* Winding motion (horizontal) */
+@keyframes sway {
+  0% {
+    transform: translateX(0);
   }
-  
-  nav li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+  50% {
+    transform: translateX(40px); /* Move right */
   }
+}
+
+/* Prevent content from going under the navbar */
+.content {
+  margin-left: 260px; /* Adjust margin-left to accommodate the width of the navbar */
+  padding: 20px;
+}
