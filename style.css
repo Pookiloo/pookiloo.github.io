@@ -6,3 +6,8 @@ body {
   font-style: normal;
   background-color: rgb(203, 238, 255);
 }
+nav{
+  margin: 0 100px;
+  border: 5px solid blue;
+  color: aliceblue;
+}
