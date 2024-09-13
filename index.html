@@ -4,112 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reghan's Resume</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
-            <div id="box">
-                <h1>Reghan Morrow</h1>
-                <p>reghan.morrow@gmail.com</p>
-            </div>
-            <div id="box">
-                <ul>
-                    <li><a href="#highlights">Highlights</a></li>
-                    <li><a href="#experience">Employment Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-    <div class="content">
 
-        <section id="highlights">
-            <div class="container">
-                <h2>Resume Highlights</h2>
-            </div>
-            <div class="list-container">
-                <p>
-                <ul>
-                    <li>Georgian College (Computer Programming - Computer Studies Student (Diploma in Progress))</li>
-                    <li>Microsoft Office (Outlook, Excel, Word, Etc.)</li>
-                    <li>Google Suites (Gmail, Sheets, Docs, Etc.)</li>
-                    <li>People Person (Worked in customer service for 6 years)</li>
-                    <li>Knowledgeable in C/C++/C#, Python, HTML/CSS/JS</li>
-                    <li>Independant Problem Solver</li>
-                    <li>Practices Leadership and Professionalism</li>
-                </ul>
-                </p>
-            </div>
+    <div class="container">
+        <header class="header">
+            <h1>Reghan Morrow</h1>
+            <p>Computer Programming | Resume Under Construction</p>
+        </header>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a Computer Programming student at Georgian College. Over the past seven years, I have cultivated a
+                deep passion for coding and software development, practicing various programming languages and working
+                on projects both as a hobbyist and a student.</p>
         </section>
-        <section>
+
+        <section id="education" class="education">
             <h2>Education</h2>
-            <div class="paragraph-container">
-                <p>
-                    June 2020<br>
-                    High School Diploma, Bear Creek Secondary School<br>
-                    I successfully attained my high school diploma. I particularly enjoyed Math, Robotics and Computer
-                    Engineering. I was a member of the Bear Creek Robotics team, we qualified for and competed at the
-                    Provincial
-                    Skills competition in 2018 representing the Simcoe County District School Board. I received early
-                    acceptance
-                    to university however due to COVID-19 postponed attendance until 2021/2022 year.<br><br>
-                </p>
-                <p>
-                    January 2024 - August 2025<br>
-                    Computer Programming, Georgian College<br>
-                    I am currently in the process of applying to Georgian College for Computer Programming. I will be
-                    full-time
-                    during the Winter Semester.<br>
-
-                </p>
+            <div class="education-item">
+                <h3>Computer Programming, Georgian College</h3>
+                <p><strong>January 2024 - August 2025</strong></p>
+                <p>Currently in my third semester. I have learned C/C++/C#, HTML/CSS/JS, Java, Python, and PHP, along
+                    with leadership and collaboration through group projects.</p>
+            </div>
+            <div class="education-item">
+                <h3>High School Diploma, Bear Creek Secondary School</h3>
+                <p><strong>June 2020</strong></p>
+                <p>Completed high school with a focus on Math, Robotics, and Computer Engineering. I represented my
+                    school in the Provincial Skills competition in 2018.</p>
             </div>
         </section>
-        <section>
 
+        <section id="experience" class="experience">
             <h2>Employment Experience</h2>
-            <div class="paragraph-container">
-                <p>
-                    December 2022 - April 2023<br>
-                    Customer Service Representative, Ontario Tech Student Union<br>
-                    Responded to emails and phone calls about the organization. Booked appointments for Esports Arena.
-                    Organized
-                    and cleaned the office area, and kept up to date with office updates.<br><br>
-                </p>
-                <p>
-                    May 2022 - August 2022 & May 2023 - August 2023<br>
-                    Student Line Associate, Honda of Canada Manufacturing<br>
-                    Worked in the Engine Plant. Communicated quality concerns. Supported overtime and performed duties
-                    safely in
-                    a large team environment.<br><br>
-                </p>
-                <p>
-                    September 2020 - August 2021<br>
-                    Contract Line Associate, Honda of Canada Manufacturing<br>
-                    Worked in the Engine Plant and involved in Q-Gate new model activity during launch. Communicated
-                    quality
-                    concerns. Supported overtime and performed duties safely in a large team environment.<br><br>
-                </p>
-                <p>
-                    June 2019 - Current<br>
-                    Administrative/ HS&E Assistant, Enterprise Mechanical<br>
-                    Updating HS&E policies and training documents. Moved the company HS&E program to an online platform
-                    for
-                    safe
-                    and efficient delivery to company employees and contractors. Performed safety audits with company
-                    employees
-                    and contractors. General office administration support. Dispatching service work, routing and
-                    customer
-                    service. On-going part-time/occasional work, dependent on availability.<br>
-
+            <div class="job">
+                <h3>League of Legends Team Manager, CyberGrizzlies Esports Club</h3>
+                <p><strong>September 2024 - December 2024</strong></p>
+                <p>Organized tryouts, managed social media announcements, and coordinated practice sessions for the
+                    team.</p>
+            </div>
+            <div class="job">
+                <h3>Customer Service Representative, Ontario Tech Student Union</h3>
+                <p><strong>December 2022 - April 2023</strong></p>
+                <p>Responded to emails, booked appointments, and maintained the office area.</p>
+            </div>
+            <div class="job">
+                <h3>Student Line Associate, Honda of Canada Manufacturing</h3>
+                <p><strong>May 2022 - August 2022 & May 2023 - August 2023</strong></p>
+                <p>Worked in the Engine Plant, communicating quality concerns and supporting a large team environment.
                 </p>
             </div>
+            <div class="job">
+                <h3>Contract Line Associate, Honda of Canada Manufacturing</h3>
+                <p><strong>September 2020 - August 2021</strong></p>
+                <p>Participated in Q-Gate new model activity during launch and supported overtime efforts safely in a
+                    large team environment.</p>
+            </div>
+            <div class="job">
+                <h3>Administrative/HS&E Assistant, Enterprise Mechanical</h3>
+                <p><strong>June 2019 - Current</strong></p>
+                <p>Maintained HS&E policies, moved the HS&E program online, and supported general office administration
+                    and dispatching.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Microsoft Office (Outlook, Excel, Word, Etc.)</li>
+                <li>Google Suites (Gmail, Sheets, Docs, Etc.)</li>
+                <li>People Person (6 years of customer service)</li>
+                <li>Knowledgeable in C/C++/C#, Python, HTML/CSS/JS, Java, and PHP</li>
+                <li>Independent Problem Solver</li>
+                <li>Leadership and Professionalism</li>
+            </ul>
         </section>
     </div>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Polaroid Website Final (HTML/CSS/JS)</h3>
+            <p><strong>January 2024 - April 2024</strong></p>
+            <p>Recreated the early Polaroid cameras such as the Impulse in a modern website format. Collaborated
+                effectively with team members.</p>
+        </div>
+        <div class="project-item">
+            <h3>Just Jessica (Fundamentals of C#)</h3>
+            <p><strong>January 2024 - April 2024</strong></p>
+            <p>Developed a text-based dating game in C#, allowing players to choose date locations and endings, as
+                well as customize names and genders.</p>
+        </div>
+        <div class="project-item">
+            <h3>Arduino Smart Home System (The Internet of Things: Arduino)</h3>
+            <p><strong>January 2024 - April 2024</strong></p>
+            <p>Created a smart home system using an Arduino with a virtual and physical model, including a front
+                door camera, security system, and automated door lock.</p>
+        </div>
+        <div class="project-item">
+            <h3>Excel Manipulation</h3>
+            <p><strong>August 2024</strong></p>
+            <p>Developed two Python scripts: one that consolidates Excel files into one, and another that compares
+                two Excel files and highlights missing information.</p>
+        </div>
+    </section>
+    <div class="container">
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email: reghan.morrow@gmail.com</p>
+        </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
