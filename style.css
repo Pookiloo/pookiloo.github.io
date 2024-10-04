@@ -4,25 +4,25 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #2e4c2f;
-  background-color: #e5efe5;
+  background-color: #d9e7d9;
   background-image: url("forest-background.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   line-height: 1.6;
   padding: 20px;
 }
 
-/* Existing styles */
-
+/* Navbar */
 .navbar {
-  background-color: rgba(34, 49, 34, 0.9);
+  background-color: rgba(50, 78, 50, 0.8);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar ul {
@@ -46,7 +47,11 @@ body {
   text-decoration: none;
 }
 
-/* Menu Icon */
+.navbar ul li a:hover {
+  color: #a0c0a0;
+  transition: color 0.3s;
+}
+
 .menu-icon {
   display: none;
   font-size: 2rem;
@@ -55,12 +60,11 @@ body {
 }
 
 /* Responsive Navbar */
-/* Updated Media Query for Responsive Navbar */
 @media (max-width: 600px) {
   .navbar ul {
     flex-direction: column;
     gap: 10px;
-    display: none; /* Hide menu by default on mobile */
+    display: none;
     position: absolute;
     top: 71px;
     left: 0;
@@ -71,25 +75,30 @@ body {
   }
 
   .navbar ul.show {
-    display: flex; /* Show menu when 'show' class is added */
-    margin: 0%;
+    display: flex;
   }
 
   .menu-icon {
-    display: block; /* Show the menu icon on mobile screens */
+    display: block;
   }
 }
 
 /* Main Container */
-.container,
-.projects {
+.container, .projects {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Header */
@@ -101,7 +110,8 @@ body {
 
 .header h1 {
   font-size: 2.5rem;
-  color: #204e20;
+  color: #3e5b3f;
+  font-family: 'Playfair Display', serif;
 }
 
 .header p {
@@ -118,23 +128,22 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #1f3521;
+  font-family: 'Playfair Display', serif;
 }
 
-p,
-ul {
+p, ul {
   font-size: 1rem;
 }
 
-.job h3,
-.education-item h3,
-.project-item h3 {
+.job h3, .education-item h3, .project-item h3 {
   font-size: 1.5rem;
-  color: #204e20;
+  color: #3e5b3f;
+  font-family: 'Playfair Display', serif;
 }
 
 ul {
   list-style-type: square;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .contact {
@@ -145,16 +154,28 @@ ul {
   font-size: 1.1rem;
 }
 
-/*Slideshow*/
-
-.project-item {
-  display:block;
+.contact a img {
+  max-width: 3em;
+  max-height: 3em;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
+
+.contact a img:hover {
+  filter: none;
+}
+
+/* Slideshow */
+.project-item {
+  display: block;
+}
+
 .project-item img {
   display: flex;
   height: 350px;
   width: 100%;
   border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .slideshow-control {
@@ -164,9 +185,7 @@ ul {
   margin: 15px 0 0 0;
 }
 
-.left-arrow,
-.right-arrow,
-.dot {
+.left-arrow, .right-arrow, .dot {
   cursor: pointer;
   color: #1f3521;
 }
@@ -182,8 +201,23 @@ ul {
   border-radius: 3px;
 }
 
-.hover{
+.hover {
   background-color: #ffffff;
+}
+
+/* Buttons */
+button, .menu-icon {
+  background-color: #4a6f4a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .menu-icon:hover {
+  background-color: #2e4c2f;
 }
 
 /* Responsive Content */
